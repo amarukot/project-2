@@ -2,8 +2,8 @@
 
 ## Project Description
 
-Thinking about these:
-Rijks Museum: https://data.rijksmuseum.nl/
+Thinking about these:  
+Rijks Museum: https://data.rijksmuseum.nl/  
 Cocktails: https://www.thecocktaildb.com/api.php
 
 My project description
@@ -13,11 +13,23 @@ My project description
 - GitHub Repo
 - Deployment URL
 
-## Wireframes
+## Wireframes & React Architecture
 
-- wireframes: https://xd.adobe.com/view/a2a5ffcd-2511-4022-62c4-b83d9e3fc779-d494/
-- react architecture
-  Define the react components and the architectural design of your app
+- Wireframes: https://xd.adobe.com/view/a2a5ffcd-2511-4022-62c4-b83d9e3fc779-d494/
+
+- React Architecture
+
+```
+Index.js
+  ⎿ App.js
+   ⎿ Components
+        ⎿ Home.js
+            ⎿ About
+        ⎿ NavBar.js
+        ⎿ Category.js
+        ⎿ Details.js
+            ⎿ Ingredients.js
+```
 
 ## MVP / Post MVP
 
@@ -42,3 +54,7 @@ Post MVP
 sample:
 ERROR: app.js:34 Uncaught error
 RESOLUTION: Missing comma in {} object
+
+```
+
+```
