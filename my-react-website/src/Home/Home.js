@@ -8,7 +8,7 @@ function Home() {
   const urlByName =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
 
-  const [foo, setDrinks] = useState({ drinks: [] });
+  const [drinks, setDrinks] = useState({ drinks: [] });
   //   Originally used the code below
   // const [foo, setDrinks] = useState({});
   // and for some reason it couldn't access the data within the object
@@ -20,14 +20,17 @@ function Home() {
       .catch(err => console.log(err));
   }, []);
 
-  console.log(foo.drinks[0]);
+  console.log(drinks.drinks[0]);
 
-  const allDrinks = foo.drinks.map((item, index) => {
+  const allDrinks = drinks.drinks.map((item, index) => {
     return (
       <div className="Drink-box" key={index}>
-        <img className="Drink-thumb" src={item.strDrinkThumb} alt="" />
-        <h2>{item.strDrink}</h2>
-        <p>{item.strInstructions}</p>
+        <img className="Drink-thumb-img" src={item.strDrinkThumb} alt="" />
+
+        <div className="Drink-title">
+          <h2>{item.strDrink}</h2>
+          {/* <p>{item.strInstructions}</p> */}
+        </div>
       </div>
     );
   });

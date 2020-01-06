@@ -5,10 +5,12 @@ import Home from "./Home/Home";
 
 function App() {
   return (
-    <header>
-      <h1>The Bartender's Guide</h1>
+    <div>
+      <header>
+        <h1>The Bartender's Guide</h1>
+      </header>
       <Home />
-    </header>
+    </div>
   );
 }
 
