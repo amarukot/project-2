@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import "./Home.css";
+import "./Cocktails.css";
 
 function Cocktails() {
   const url = "https://www.thecocktaildb.com/api/json/v1/1";
@@ -28,7 +28,7 @@ function Cocktails() {
         <img className="Drink-thumb-img" src={item.strDrinkThumb} alt="" />
 
         <div className="Drink-title">
-          <h3>{item.strDrink}</h3>
+          <h4>{item.strDrink}</h4>
         </div>
       </div>
     );

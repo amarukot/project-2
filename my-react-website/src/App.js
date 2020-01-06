@@ -13,12 +13,21 @@ function App() {
           <h1>The Bartender's Guide</h1>
         </header>
         <nav className="Nav-bar">
-          <Link to="/">
+          <Link className="Nav-item" to="/">
             <h4>Home</h4>
           </Link>
-          <Link to="/cocktails">
+          <h4 className="Nav-item">About</h4>
+          <Link className="Nav-item" to="/cocktails">
             <h4>Cocktails</h4>
           </Link>
+          <div className="Search-bar">
+            <input
+              style={inputStyle}
+              type="text"
+              placeholder="I wanna drink..."
+            ></input>
+            <h4>Search</h4>
+          </div>
         </nav>
         <main>
           <Route exact path="/" component={Home} />
@@ -28,5 +37,10 @@ function App() {
     </BrowserRouter>
   );
 }
+
+const inputStyle = {
+  margin: "10px 10px",
+  padding: "5px 10px"
+};
 
 export default App;
