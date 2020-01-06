@@ -41,9 +41,29 @@ MVP
 
 Post MVP
 
+- search and filter functions
+- A+ styling
+
 ## Components
 
+| Component | Description                         |
+| --------- | ----------------------------------- |
+| App       | holds layout & heirarchy            |
+| Home      | calls API                           |
+| NavBar    | navigation                          |
+| Category  | results of drinks within a category |
+
 ## Time Frames
+
+| Component            | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------- | -------- | -------------- | ------------- | ----------- |
+| Working API Basic    | H        | 2 hrs          | 1.5 hrs       | 1.5 hrs     |
+| Creating Components  | H        | 5 hrs          | 1 hr          | --          |
+| Navigation           | H        | 3 hrs          | 1 hr          | --          | -- |
+| Netlify deployment   | H        | 1 hr           | --            | --          | -- |
+| Search functionality | M        | 6 hrs          | --            | --          |
+| Filter functionality | L        | 8 hrs          | --            | --          |
+| Total                | --       | --             | --            | --          |
 
 ## Additional Libraries
 
@@ -51,10 +71,22 @@ Post MVP
 
 ## Issues and Resolutions
 
-sample:
-ERROR: app.js:34 Uncaught error
-RESOLUTION: Missing comma in {} object
+1/6/20
+Able to access API data but having trouble with data type and mapping of resulting data.
+Was able to fix by specifying key: value pairing of 'drinks'.
+
+Just doing the line of code below was not enough.
 
 ```
+const [drinks, setDrinks] = useState({});
+```
 
+Able to `console.log(drinks.drinks)` but not able to map it out even after using `Object.values(drinks.drinks)` (also made sure what the data type was by doing `typeof`)
+
+Consulted with Carlos and we did not figure out why it was so.
+
+Doing the following fixed it, (but not explain)
+
+```
+const [drinks, setDrinks] = useState({ drinks: [] });
 ```
