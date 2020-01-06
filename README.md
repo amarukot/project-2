@@ -2,16 +2,16 @@
 
 ## Project Description
 
-Thinking about these:  
-Rijks Museum: https://data.rijksmuseum.nl/  
-Cocktails: https://www.thecocktaildb.com/api.php
+Bartender's Guide - A React Website
 
-My project description
+using API Cocktails: https://www.thecocktaildb.com/api.php
+
+A simple website to help the cocktail enthusiast and party host make a host of different cocktails and drinks. Look though categories or search for a particular drink and get the ingredients and recipe for it.
 
 ## Project Links
 
-- GitHub Repo
-- Deployment URL
+- GitHub Repo: https://github.com/amarukot/project-2
+- Deployment URL:
 
 ## Wireframes & React Architecture
 
