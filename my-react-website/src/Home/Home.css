@@ -1,0 +1,15 @@
+.Drink-thumb {
+  max-height: 100%;
+}
+
+.Drink-box {
+  height: 300px;
+  padding: 10px;
+  background-color: beige;
+  border: thin solid black;
+}
+
+.Drinks-container {
+  display: flex;
+  background-color: red;
+}
