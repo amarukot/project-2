@@ -1,0 +1,15 @@
+.Home-container {
+  display: flex;
+}
+
+.About-box {
+  flex-grow: 1;
+  max-width: 33vw;
+  min-width: 200px;
+  padding: 20px;
+}
+
+.Hero-box {
+  flex-grow: 2;
+  min-width: 20vw;
+}

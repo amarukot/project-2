@@ -55,23 +55,39 @@ Post MVP
 
 ## Time Frames
 
-| Component            | Priority | Estimated Time | Time Invested | Actual Time |
-| -------------------- | -------- | -------------- | ------------- | ----------- |
-| Working API Basic    | H        | 2 hrs          | 1.5 hrs       | 1.5 hrs     |
-| Creating Components  | H        | 5 hrs          | 1 hr          | --          |
-| Navigation           | H        | 3 hrs          | 1 hr          | --          | -- |
-| Netlify deployment   | H        | 1 hr           | --            | --          | -- |
-| Search functionality | M        | 6 hrs          | --            | --          |
-| Filter functionality | L        | 8 hrs          | --            | --          |
-| Total                | --       | --             | --            | --          |
+| Component              | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------- | -------- | -------------- | ------------- | ----------- |
+| Working API Basic      | H        | 2 hrs          | 1.5 hrs       | 1.5 hrs     |
+| Creating Components    | H        | 5 hrs          | 2 hrs         | --          |
+| Navigation             | H        | 3 hrs          | 2 hrs         | --          |
+| Event handling         | H        | 4 hrs          | 1 hr          | --          |
+| Netlify deployment     | H        | 1 hr           | --            | --          |
+| Search functionality   | M        | 6 hrs          | --            | --          |
+| Filter functionality   | L        | 8 hrs          | --            | --          |
+| Cleanup code, refactor | M        | 2 hrs          | --            | --          |
+| Total                  | --       | 32 hrs         | --            | --          |
 
 ## Additional Libraries
 
 ## Code Snippet
 
+<details>
+<summary> This is one of those code snippets that fixed something that bugged me for a while. Even asking TA's did not yield great results. </summary>
+
+```jsx
+if (drinks.drinks && drinks.drinks[0]) {
+  randomDrinkImage = drinks.drinks[0].strDrinkThumb;
+}
+```
+
+Scroll down to [Issues and Resolutions 1/7/20](#1/7/20) for details.
+
+</details>
+
 ## Issues and Resolutions
 
-**1/6/20**  
+### 1/6/20
+
 Able to access API data but having trouble with data type and mapping of resulting data.
 Was able to fix by specifying key: value pairing of 'drinks'.
 
@@ -91,7 +107,8 @@ Doing the following fixed it, (but not explain)
 const [drinks, setDrinks] = useState({ drinks: [] });
 ```
 
-**1/7/20**  
+### 1/7/20
+
 Building Home page with a hero image using API for a random drink, I encounted the same issue again, even though I used the same code that supposedly 'fixed' the problem before. Will do some research before using up a token, but I need to understand why this breaks.
 
 ```jsx
@@ -114,3 +131,20 @@ strDrink: "Amaretto Sunrise";
 
 but I can't access `drinks.drinks[0].idDrink` -- comes of as  
  `TypeError: Cannot read property 'idDrink' of undefined`
+
+**_UPDATE:_**  
+ok, so I think the error is encountered before the API call and breaks the code. Using an IF statement to check type of each property will force to return undefined instead of the uncaught error of 'Cannot read prop of undef'.
+
+```jsx
+if (obj.prop1 && obj.prop1.prop2) {
+  whatever func
+}
+```
+
+This skips the uncaught error and you will be able to get to the data you're looking for and assign it to a var.
+
+The weird thing is it worked on Cocktails.js probably because it got called on the map function? IDK, not gonna try and figure that out right now.
+
+I figured this out through some deep digging... proud, but also irritated. Part of dev life I guess.
+
+Onwards...

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./Cocktails.css";
 
 function Cocktails() {
-  const url = "https://www.thecocktaildb.com/api/json/v1/1";
   const urlByLetter =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
   const urlByName =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
+  const urlCocktails =
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail";
 
   const [drinks, setDrinks] = useState({ drinks: [] });
   //   Originally used the code below
@@ -14,7 +15,7 @@ function Cocktails() {
   // and for some reason it couldn't access the data within the object
 
   useEffect(() => {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail")
+    fetch(urlCocktails)
       .then(res => res.json())
       .then(res => setDrinks(res))
       .catch(err => console.log(err));
