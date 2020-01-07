@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+
 import "./Cocktails.css";
 
 function Cocktails() {
@@ -25,13 +27,12 @@ function Cocktails() {
 
   const allDrinks = drinks.drinks.map((item, index) => {
     return (
-      <div className="Drink-box" key={index}>
+      <Link to="/details/" className="Drink-box" key={index}>
         <img className="Drink-thumb-img" src={item.strDrinkThumb} alt="" />
-
         <div className="Drink-title">
           <h4>{item.strDrink}</h4>
         </div>
-      </div>
+      </Link>
     );
   });
 

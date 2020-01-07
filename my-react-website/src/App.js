@@ -5,6 +5,8 @@ import "./App.css";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Cocktails from "./Cocktails/Cocktails";
+import Details from "./Details/Details";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
@@ -36,7 +38,9 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/cocktails" component={Cocktails} />
+          <Route path="/details/:drink" component={Details} />
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );
