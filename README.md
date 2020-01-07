@@ -71,13 +71,13 @@ Post MVP
 
 ## Issues and Resolutions
 
-1/6/20
+**1/6/20**  
 Able to access API data but having trouble with data type and mapping of resulting data.
 Was able to fix by specifying key: value pairing of 'drinks'.
 
 Just doing the line of code below was not enough.
 
-```
+```jsx
 const [drinks, setDrinks] = useState({});
 ```
 
@@ -87,6 +87,30 @@ Consulted with Carlos and we did not figure out why it was so.
 
 Doing the following fixed it, (but not explain)
 
-```
+```jsx
 const [drinks, setDrinks] = useState({ drinks: [] });
 ```
+
+**1/7/20**  
+Building Home page with a hero image using API for a random drink, I encounted the same issue again, even though I used the same code that supposedly 'fixed' the problem before. Will do some research before using up a token, but I need to understand why this breaks.
+
+```jsx
+const [drinks, setDrinks] = useState({ drinks: [] });
+useEffect(() => {
+  fetch(randURL)
+    .then(res => res.json())
+    .then(res => setDrinks(res))
+    .catch(err => console.log(err));
+}, []);
+console.log(drinks.drinks[0]);
+```
+
+console log above shows `drinks.drinks[0]` as an object that contains these values (and more)
+
+```jsx
+idDrink: "14578";
+strDrink: "Amaretto Sunrise";
+```
+
+but I can't access `drinks.drinks[0].idDrink` -- comes of as  
+ `TypeError: Cannot read property 'idDrink' of undefined`
