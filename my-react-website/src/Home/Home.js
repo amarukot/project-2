@@ -20,9 +20,8 @@ function Home() {
   if (drinks.drinks && drinks.drinks[0]) {
     randomDrinkImage = drinks.drinks[0].strDrinkThumb;
   }
-  console.log(randomDrinkImage);
 
-  // console.log(x[0].idDrink);
+  console.log(randomDrinkImage);
 
   return (
     <section className="Home-container">

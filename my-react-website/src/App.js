@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.css";
@@ -9,9 +9,23 @@ import Details from "./Details/Details";
 import Footer from "./Footer/Footer";
 
 function App() {
+  const urlCocktails =
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail";
+
+  const [cocktailDrinks, setCocktailDrinks] = useState({ cocktailDrinks: [] });
+
+  useEffect(() => {
+    fetch(urlCocktails)
+      .then(res => res.json())
+      .then(res => setCocktailDrinks(res))
+      .catch(err => console.log(err));
+  }, []);
+
+  console.log(cocktailDrinks);
+
   return (
     <BrowserRouter>
-      <div>
+      <div className="Master-container">
         <header className="App-header">
           <h1>The Bartender's Guide</h1>
         </header>
@@ -37,10 +51,13 @@ function App() {
         <main>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/cocktails" component={Cocktails} />
+          <Route
+            path="/cocktails"
+            render={props => <Cocktails data={cocktailDrinks.drinks} />}
+          />
           <Route path="/details/:drink" component={Details} />
         </main>
-        <Footer />
+        <Route path="/" component={Footer} />
       </div>
     </BrowserRouter>
   );

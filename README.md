@@ -21,14 +21,17 @@ A simple website to help the cocktail enthusiast and party host make a host of d
 
 ```
 Index.js
-  ⎿ App.js
-   ⎿ Components
-        ⎿ Home.js
-            ⎿ About
-        ⎿ NavBar.js
-        ⎿ Category.js
-        ⎿ Details.js
-            ⎿ Ingredients.js
+  +-- App.js
+   +-- Home.js
+   |   +-- About.js
+   |   +-- Hero Image
+   +-- NavBar.js
+   |   +-- Link to Home, About, Category
+   |   +-- Search Form
+   +-- Category.js
+   +-- Details.js
+   |   +-- Ingredients.js
+   +-- Footer.js
 ```
 
 ## MVP / Post MVP
@@ -46,12 +49,15 @@ Post MVP
 
 ## Components
 
-| Component | Description                         |
-| --------- | ----------------------------------- |
-| App       | holds layout & heirarchy            |
-| Home      | calls API                           |
-| NavBar    | navigation                          |
-| Category  | results of drinks within a category |
+| Component | Description                              |
+| --------- | ---------------------------------------- |
+| App       | holds layout, links, routes              |
+| Home      | holds About and Hero image               |
+| NavBar    | navigation links                         |
+| Category  | results of drinks within a category      |
+|           | category page also calls API             |
+| Details   | gets props and displays details of drink |
+| Footer    | just footer info                         |
 
 ## Time Frames
 

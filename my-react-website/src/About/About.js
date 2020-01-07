@@ -19,7 +19,8 @@ function About() {
 
 const aboutStyle = {
   padding: "10px",
-  maxWidth: "800px"
+  maxWidth: "800px",
+  minHeight: "70vh"
 };
 
 export default About;

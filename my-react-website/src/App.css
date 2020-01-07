@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+/* 
+.Master-container {
+  display: flex;
+} */
 
 .App-logo {
   height: 40vmin;
