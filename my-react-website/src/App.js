@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Home/Home";
+import About from "./About/About";
 import Cocktails from "./Cocktails/Cocktails";
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
           <Link className="Nav-item" to="/">
             <h4>Home</h4>
           </Link>
-          <h4 className="Nav-item">About</h4>
+          <Link className="Nav-item" to="/about">
+            <h4 className="Nav-item">About</h4>
+          </Link>
           <Link className="Nav-item" to="/cocktails">
             <h4>Cocktails</h4>
           </Link>
@@ -31,6 +34,7 @@ function App() {
         </nav>
         <main>
           <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
           <Route path="/cocktails" component={Cocktails} />
         </main>
       </div>

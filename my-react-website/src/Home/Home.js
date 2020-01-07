@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 
 function Home() {
-  return <div>This is the Home Page</div>;
+  return (
+    <div>
+      <div>HERO IMAGE - RANDOM DRINK</div>
+    </div>
+  );
 }
 
 export default Home;
