@@ -12,7 +12,7 @@ function App() {
   const urlCocktails =
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail";
 
-  const [cocktailDrinks, setCocktailDrinks] = useState({ cocktailDrinks: [] });
+  const [cocktailDrinks, setCocktailDrinks] = useState([]);
 
   useEffect(() => {
     fetch(urlCocktails)
@@ -21,7 +21,9 @@ function App() {
       .catch(err => console.log(err));
   }, []);
 
-  console.log(cocktailDrinks);
+  if (cocktailDrinks.length == 0) {
+    return <div>...loading...</div>;
+  }
 
   return (
     <BrowserRouter>
@@ -45,17 +47,24 @@ function App() {
               type="text"
               placeholder="I wanna drink..."
             ></input>
-            <h4>Search</h4>
+            <button type="submit" style={inputStyle}>
+              <h4>Search</h4>
+            </button>
           </div>
         </nav>
         <main>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route
-            path="/cocktails"
+            path="/cocktails/"
             render={props => <Cocktails data={cocktailDrinks.drinks} />}
           />
-          <Route path="/details/:drink" component={Details} />
+          <Route
+            path="/details/:drink"
+            render={props => (
+              <Details data={cocktailDrinks.drinks} {...props} />
+            )}
+          />
         </main>
         <Route path="/" component={Footer} />
       </div>
@@ -64,8 +73,8 @@ function App() {
 }
 
 const inputStyle = {
-  margin: "10px 10px",
-  padding: "5px 10px"
+  margin: "10px 5px",
+  padding: "0 10px"
 };
 
 export default App;

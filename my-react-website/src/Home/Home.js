@@ -6,30 +6,35 @@ import About from "../About/About";
 function Home() {
   const randURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
-  const [drinks, setDrinks] = useState({ drinks: [] });
+  const [randDrink, setRandDrink] = useState([]);
 
   useEffect(() => {
     fetch(randURL)
       .then(res => res.json())
-      .then(res => setDrinks(res))
+      .then(res => setRandDrink(res))
       .catch(err => console.log(err));
   }, []);
 
-  var randomDrinkImage;
-
-  if (drinks.drinks && drinks.drinks[0]) {
-    randomDrinkImage = drinks.drinks[0].strDrinkThumb;
+  if (randDrink.length == 0) {
+    return <div>...loading...</div>;
   }
 
-  console.log(randomDrinkImage);
+  console.log(randDrink);
 
   return (
     <section className="Home-container">
       <div className="About-box">
         <About />
+        <hr></hr>
+        <h2>Featured Drink</h2>
+        <h4>
+          <i>{randDrink.drinks[0].strDrink}</i>
+        </h4>
+        {/* <p>{randomDrinkInstr}</p> */}
       </div>
+
       <div className="Hero-box">
-        <img src={randomDrinkImage} alt="" />
+        <img src={randDrink.drinks[0].strDrinkThumb} alt="" />
       </div>
     </section>
   );
