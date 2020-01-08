@@ -7,6 +7,7 @@ import About from "./About/About";
 import Cocktails from "./Cocktails/Cocktails";
 import Details from "./Details/Details";
 import Footer from "./Footer/Footer";
+import NavBar from "./NavBar/NavBar";
 
 function App() {
   const urlCocktails =
@@ -39,27 +40,7 @@ function App() {
         <header className="App-header">
           <h1>The Bartender's Guide</h1>
         </header>
-        <nav className="Nav-bar">
-          <Link className="Nav-item" to="/">
-            <h4>Home</h4>
-          </Link>
-          <Link className="Nav-item" to="/about">
-            <h4 className="Nav-item">About</h4>
-          </Link>
-          <Link className="Nav-item" to="/cocktails">
-            <h4>Cocktails</h4>
-          </Link>
-          <div className="Search-bar">
-            <input
-              style={inputStyle}
-              type="text"
-              placeholder="I wanna drink..."
-            ></input>
-            <button type="submit" style={inputStyle}>
-              <h4>Search</h4>
-            </button>
-          </div>
-        </nav>
+        <NavBar />
         <main>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -79,10 +60,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
-const inputStyle = {
-  margin: "10px 5px",
-  padding: "0 10px"
-};
 
 export default App;

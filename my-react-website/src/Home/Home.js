@@ -32,7 +32,7 @@ function Home() {
         <h4>
           <i>{randDrink.drinks[0].strDrink}</i>
         </h4>
-        <Link to={`/details/${randDrink.drinks[0].idDrink}`}>
+        <Link to={`/details/${randDrink.drinks[0].idDrink}`} style={featLink}>
           Click here to make this drink.
         </Link>
       </div>
@@ -43,5 +43,11 @@ function Home() {
     </section>
   );
 }
+
+const featLink = {
+  textDecoration: "none",
+  fontSize: "80%",
+  fontStyle: "italic"
+};
 
 export default Home;
