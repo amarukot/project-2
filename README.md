@@ -154,3 +154,15 @@ The weird thing is it worked on Cocktails.js probably because it got called on t
 I figured this out through some deep digging... proud, but also irritated. Part of dev life I guess.
 
 Onwards...
+
+### 1/8/20
+
+Joe showed me a more elegant way of fixing the API call issue.
+
+```jsx
+if (obj.length == 0) {
+  return <div>empty</div>;
+}
+```
+
+This will not return an error, just an empty div while the API is fetched and the data is still empty. You can replace this with a loading image or something. For now, I just used `<div>...LOADING...</div>`
