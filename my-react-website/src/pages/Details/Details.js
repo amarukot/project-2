@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DrinkDetails from "../DrinkDetails/DrinkDetails";
+import DrinkDetails from "../../components/DrinkDetails/DrinkDetails";
 
 function Details(props) {
   console.log(props);

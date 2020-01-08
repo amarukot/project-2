@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 // import logo from "./logo.svg";
+
 import "./App.css";
-import Home from "./Home/Home";
-import About from "./About/About";
-import Cocktails from "./Cocktails/Cocktails";
-import Details from "./Details/Details";
-import Footer from "./Footer/Footer";
-import NavBar from "./NavBar/NavBar";
+
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Cocktails from "./pages/Cocktails/Cocktails";
+import Details from "./pages/Details/Details";
+import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   const urlCocktails =
