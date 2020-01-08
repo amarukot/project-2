@@ -11,18 +11,26 @@ import Footer from "./Footer/Footer";
 function App() {
   const urlCocktails =
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail";
+  const urlShots =
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Shot";
 
   const [cocktailDrinks, setCocktailDrinks] = useState([]);
+  const [shotDrinks, setShotDrinks] = useState([]);
 
   useEffect(() => {
     fetch(urlCocktails)
       .then(res => res.json())
       .then(res => setCocktailDrinks(res))
       .catch(err => console.log(err));
+
+    fetch(urlShots)
+      .then(res1 => res1.json())
+      .then(res1 => setShotDrinks(res1))
+      .catch(err1 => console.log(err1));
   }, []);
 
   if (cocktailDrinks.length == 0) {
-    return <div>...loading...</div>;
+    return <div>...LOADING...</div>;
   }
 
   return (

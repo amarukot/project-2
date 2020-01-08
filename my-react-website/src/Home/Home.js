@@ -30,7 +30,7 @@ function Home() {
         <h4>
           <i>{randDrink.drinks[0].strDrink}</i>
         </h4>
-        {/* <p>{randomDrinkInstr}</p> */}
+        <p>Ingredients & Instructions</p>
       </div>
 
       <div className="Hero-box">
