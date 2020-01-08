@@ -21,17 +21,7 @@ function Details(props) {
   }
   console.log(drink.drinks[0]);
 
-  return (
-    <DrinkDetails drink={drink.drinks[0]} />
-    // <div style={detailStyle}>
-    //   <div style={infoStyle}>
-    //     <h1>{drink.drinks[0].strDrink}</h1>
-    //     <h4>Ingredients</h4>
-    //     <p style={instructionStyle}>{drink.drinks[0].strInstructions}</p>
-    //   </div>
-    //   <img src={drink.drinks[0].strDrinkThumb} alt="" />
-    // </div>
-  );
+  return <DrinkDetails drink={drink.drinks[0]} />;
 }
 
 export default Details;

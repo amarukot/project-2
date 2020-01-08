@@ -5,10 +5,6 @@ function DrinkDetails(drink) {
 
   console.log(thisDrink);
 
-  // if (drink.length == 0) {
-  //     return <div>...LOADING...</div>;
-  //   }
-
   return (
     <div style={detailStyle}>
       <div style={infoStyle}>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+
 import "./Home.css";
 
 import About from "../About/About";
@@ -30,7 +32,9 @@ function Home() {
         <h4>
           <i>{randDrink.drinks[0].strDrink}</i>
         </h4>
-        <p>Ingredients & Instructions</p>
+        <Link to={`/details/${randDrink.drinks[0].idDrink}`}>
+          Click here to make this drink.
+        </Link>
       </div>
 
       <div className="Hero-box">
