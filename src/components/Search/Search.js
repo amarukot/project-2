@@ -16,7 +16,7 @@ function Search(searchFunc) {
 
   const handleClick = () => {
     console.log(searchInput, " search submitted");
-
+    searchFunc.searchFunc(searchInput);
     resetSearch();
   };
 

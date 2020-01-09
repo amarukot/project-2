@@ -6,8 +6,6 @@ import "./NavBar.css";
 import Search from "../Search/Search";
 
 function NavBar(searchFunc) {
-  console.log(searchFunc);
-
   return (
     <nav className="Nav-bar">
       <Link className="Nav-item" to="/">
@@ -22,7 +20,7 @@ function NavBar(searchFunc) {
       <Link className="Nav-item" to="/shots">
         <h4>Shots</h4>
       </Link>
-      <Search searchFunc={searchFunc} />
+      <Search searchFunc={searchFunc.searchFunc} />
     </nav>
   );
 }

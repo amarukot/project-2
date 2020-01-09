@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 
 import "./App.css";
@@ -33,11 +33,12 @@ function App() {
       .catch(err1 => console.log(err1));
   }, []);
 
-  const searchFunc = () => {
-    console.log("searching...");
+  const searchFunc = searchString => {
+    // console.log("searching...", searchString)
+    return <div>TEST</div>;
   };
 
-  if (cocktailDrinks.length == 0) {
+  if (cocktailDrinks.length === 0) {
     return <div>...LOADING...</div>;
   }
 
