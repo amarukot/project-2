@@ -19,6 +19,9 @@ function NavBar(searchFunc) {
       <Link className="Nav-item" to="/cocktails">
         <h4>Cocktails</h4>
       </Link>
+      <Link className="Nav-item" to="/shots">
+        <h4>Shots</h4>
+      </Link>
       <Search searchFunc={searchFunc} />
     </nav>
   );

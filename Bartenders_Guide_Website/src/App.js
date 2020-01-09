@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Cocktails from "./pages/Cocktails/Cocktails";
+import Shots from "./pages/Shots/Shots";
 import Details from "./pages/Details/Details";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
@@ -53,6 +54,10 @@ function App() {
           <Route
             path="/cocktails/"
             render={props => <Cocktails data={cocktailDrinks.drinks} />}
+          />
+          <Route
+            path="/shots/"
+            render={props => <Shots data={shotDrinks.drinks} />}
           />
           <Route
             path="/details/:drink"
