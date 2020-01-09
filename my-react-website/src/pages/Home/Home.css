@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.About-box {
+.Side-box {
   flex-grow: 1;
   max-width: 33vw;
   min-width: 200px;

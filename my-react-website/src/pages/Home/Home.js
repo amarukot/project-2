@@ -25,10 +25,9 @@ function Home() {
 
   return (
     <section className="Home-container">
-      <div className="About-box">
-        <About />
-        <hr></hr>
+      <div className="Side-box">
         <h2>Featured Drink</h2>
+        <hr></hr>
         <h4>
           <i>{randDrink.drinks[0].strDrink}</i>
         </h4>

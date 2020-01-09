@@ -32,6 +32,10 @@ function App() {
       .catch(err1 => console.log(err1));
   }, []);
 
+  const searchFunc = () => {
+    console.log("searching...");
+  };
+
   if (cocktailDrinks.length == 0) {
     return <div>...LOADING...</div>;
   }
@@ -42,7 +46,7 @@ function App() {
         <header className="App-header">
           <h1>The Bartender's Guide</h1>
         </header>
-        <NavBar />
+        <NavBar searchFunc={searchFunc} />
         <main>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />

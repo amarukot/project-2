@@ -1,0 +1,25 @@
+.Search-bar {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 8;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.Search-field {
+  /* margin: 10px 5px; */
+  padding: 0 10px;
+}
+
+.Search-btn {
+  border-radius: 10px;
+  background-color: rgb(144, 206, 52);
+  min-width: min-content;
+  /* width: 80px; */
+  padding: 0px 20px;
+  margin: 0 10px;
+  border: none;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+}

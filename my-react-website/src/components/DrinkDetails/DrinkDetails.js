@@ -1,34 +1,78 @@
 import React from "react";
+import "./DrinkDetails.css";
 
 function DrinkDetails(drink) {
   const thisDrink = drink.drink;
-
-  console.log(thisDrink);
+  console.log(thisDrink.strIngredient1);
 
   return (
-    <div style={detailStyle}>
-      <div style={infoStyle}>
+    <div className="Detail-box">
+      <div className="Info-box">
         <h1>{thisDrink.strDrink}</h1>
-        <h4>Ingredients</h4>
-        <p style={instructionStyle}>{thisDrink.strInstructions}</p>
+        <hr></hr>
+        <h4 className="Detail-subtitle">Ingredients</h4>
+        <div className="Ingredients">
+          <ul className="Ingredient-list">
+            {thisDrink.strIngredient1 == null ? (
+              <div></div>
+            ) : (
+              <li>{thisDrink.strIngredient1}</li>
+            )}
+            {thisDrink.strIngredient2 == null ? (
+              <div></div>
+            ) : (
+              <li>{thisDrink.strIngredient2}</li>
+            )}
+            {thisDrink.strIngredient3 == null ? (
+              <div></div>
+            ) : (
+              <li>{thisDrink.strIngredient3}</li>
+            )}
+            {thisDrink.strIngredient4 == null ? (
+              <div></div>
+            ) : (
+              <li>{thisDrink.strIngredient4}</li>
+            )}
+            {thisDrink.strIngredient5 == null ? (
+              <div></div>
+            ) : (
+              <li>{thisDrink.strIngredient5}</li>
+            )}
+          </ul>
+          <ul className="Measure-list">
+            {thisDrink.strMeasure1 == null ? (
+              <div></div>
+            ) : (
+              <li>- {thisDrink.strMeasure1}</li>
+            )}{" "}
+            {thisDrink.strMeasure2 == null ? (
+              <div></div>
+            ) : (
+              <li>- {thisDrink.strMeasure2}</li>
+            )}
+            {thisDrink.strMeasure3 == null ? (
+              <div></div>
+            ) : (
+              <li>- {thisDrink.strMeasure3}</li>
+            )}
+            {thisDrink.strMeasure4 == null ? (
+              <div></div>
+            ) : (
+              <li>- {thisDrink.strMeasure4}</li>
+            )}
+            {thisDrink.strMeasure5 == null ? (
+              <div></div>
+            ) : (
+              <li>- {thisDrink.strMeasure5}</li>
+            )}
+          </ul>
+        </div>
+        <h4 className="Detail-subtitle">Instructions</h4>
+        <p className="Instructions">{thisDrink.strInstructions}</p>
       </div>
-      <img src={thisDrink.strDrinkThumb} alt="" />
+      <img className="Detail-img" src={thisDrink.strDrinkThumb} alt="" />
     </div>
   );
 }
-
-const detailStyle = {
-  display: "flex"
-};
-
-const infoStyle = {
-  padding: "10px",
-  minWidth: "200px"
-};
-
-const instructionStyle = {
-  fontSize: "80%",
-  fontStyle: "italic"
-};
 
 export default DrinkDetails;
