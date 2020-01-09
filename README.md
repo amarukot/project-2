@@ -166,3 +166,9 @@ if (obj.length == 0) {
 ```
 
 This will not return an error, just an empty div while the API is fetched and the data is still empty. You can replace this with a loading image or something. For now, I just used `<div>...LOADING...</div>`
+
+### 1/9/20
+
+Made individual ingredients and measurements to detail page. Minor styling tweaks. Separated css styling to css files.
+
+Deployed to Netlify.
