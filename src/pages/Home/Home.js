@@ -19,8 +19,6 @@ function Home() {
     return <div>...loading...</div>;
   }
 
-  console.log(randDrink);
-
   return (
     <section className="Home-container">
       <div className="Side-box">

@@ -15,7 +15,6 @@ function Search(searchFunc) {
   };
 
   const handleClick = () => {
-    console.log(searchInput, " search submitted");
     searchFunc.searchFunc(searchInput);
     resetSearch();
   };
@@ -29,9 +28,11 @@ function Search(searchFunc) {
         type="text"
         placeholder="I wanna drink..."
       ></input>
-      <button onClick={handleClick} type="button" className="Search-btn">
-        <h4>Search</h4>
-      </button>
+      <Link to="/search/">
+        <button onClick={handleClick} type="button" className="Search-btn">
+          <h4>Search</h4>
+        </button>
+      </Link>
     </div>
   );
 }

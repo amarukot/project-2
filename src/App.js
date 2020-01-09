@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Cocktails from "./pages/Cocktails/Cocktails";
 import Shots from "./pages/Shots/Shots";
+import SearchResults from "./pages/SearchResults/SearchResults";
 import Details from "./pages/Details/Details";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
@@ -17,9 +18,14 @@ function App() {
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail";
   const urlShots =
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Shot";
+  const urlDrinkName =
+    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
   const [cocktailDrinks, setCocktailDrinks] = useState([]);
   const [shotDrinks, setShotDrinks] = useState([]);
+  const [searchDrinks, setSearchDrinks] = useState([]);
+
+  const [searchString, setSearchString] = useState("");
 
   useEffect(() => {
     fetch(urlCocktails)
@@ -31,12 +37,21 @@ function App() {
       .then(res1 => res1.json())
       .then(res1 => setShotDrinks(res1))
       .catch(err1 => console.log(err1));
+
+    console.log("API calls ran");
   }, []);
 
-  const searchFunc = searchString => {
-    // console.log("searching...", searchString)
-    return <div>TEST</div>;
+  const searchFunc = str => {
+    setSearchString(str);
   };
+
+  useEffect(() => {
+    console.log("searchString is now", searchString);
+    fetch(`${urlDrinkName}${searchString}`)
+      .then(res => res.json())
+      .then(res => setSearchDrinks(res))
+      .catch(err => console.log(err));
+  }, [searchString]);
 
   if (cocktailDrinks.length === 0) {
     return <div>...LOADING...</div>;
@@ -59,6 +74,10 @@ function App() {
           <Route
             path="/shots/"
             render={props => <Shots data={shotDrinks.drinks} />}
+          />
+          <Route
+            path="/search/"
+            render={props => <SearchResults data={searchDrinks.drinks} />}
           />
           <Route
             path="/details/:drink"
