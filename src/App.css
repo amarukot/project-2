@@ -42,9 +42,12 @@
 }
 
 .Master-container {
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1200px; */
   text-align: center;
   /* background-color: rgb(240, 240, 240); */
+  /* margin: 0 auto; */
 }
 
 .Main-wrapper {
