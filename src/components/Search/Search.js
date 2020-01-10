@@ -20,7 +20,7 @@ function Search(searchFunc) {
   };
 
   return (
-    <div className="Search-bar">
+    <form className="Search-bar">
       <input
         onChange={handleChange}
         value={searchInput}
@@ -29,11 +29,11 @@ function Search(searchFunc) {
         placeholder="I wanna drink..."
       ></input>
       <Link to="/search/">
-        <button onClick={handleClick} type="button" className="Search-btn">
+        <button onClick={handleClick} type="submit" className="Search-btn">
           <h4>Search</h4>
         </button>
       </Link>
-    </div>
+    </form>
   );
 }
 

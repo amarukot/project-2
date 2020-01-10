@@ -44,10 +44,12 @@ function App() {
   };
 
   useEffect(() => {
-    fetch(`${urlDrinkName}${searchString}`)
-      .then(res => res.json())
-      .then(res => setSearchDrinks(res))
-      .catch(err => console.log(err));
+    if (searchString.length > 0) {
+      fetch(`${urlDrinkName}${searchString}`)
+        .then(res => res.json())
+        .then(res => setSearchDrinks(res))
+        .catch(err => console.log(err));
+    }
   }, [searchString]);
 
   if (cocktailDrinks.length === 0) {
