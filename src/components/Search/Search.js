@@ -24,6 +24,7 @@ function Search(searchFunc) {
       <input
         onChange={handleChange}
         value={searchInput}
+        onSubmit={handleClick}
         className="Search-field"
         type="text"
         placeholder="I wanna drink..."
