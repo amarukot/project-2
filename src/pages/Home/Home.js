@@ -16,7 +16,7 @@ function Home() {
   }, []);
 
   if (randDrink.length === 0) {
-    return <div>...loading...</div>;
+    return <div>...LOADING...</div>;
   }
 
   return (
@@ -24,9 +24,7 @@ function Home() {
       <div className="Side-box">
         <h2>Featured Drink</h2>
         <hr></hr>
-        <h4 className="Featured-drink-text">
-          <i>{randDrink.drinks[0].strDrink}</i>
-        </h4>
+        <h4 className="Featured-drink-text">{randDrink.drinks[0].strDrink}</h4>
         <Link
           to={`/details/${randDrink.drinks[0].idDrink}`}
           className="Featured-link"

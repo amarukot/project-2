@@ -17,7 +17,9 @@ function SearchResults(data) {
     <div className="Drinks-container">
       {drinks.length === 0 ? (
         <div style={emptySearchStyle}>
-          "Your search came up empty. Try again."
+          Your search came up empty. <br />
+          <br />
+          Try again.
         </div>
       ) : (
         allDrinks
@@ -28,6 +30,8 @@ function SearchResults(data) {
 
 const emptySearchStyle = {
   margin: "0 auto",
-  padding: "100px 0"
+  padding: "100px 0",
+  fontFamily: "worker, sans-serif",
+  fontSize: "200%"
 };
 export default SearchResults;

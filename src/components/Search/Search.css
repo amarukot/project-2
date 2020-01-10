@@ -15,6 +15,11 @@
 .Search-field {
   /* margin: 10px 5px; */
   padding: 0 10px;
+  border: #f7a400 solid thin;
+  font-family: "zenon", serif;
+  font-weight: 800;
+  color: #361d32;
+  letter-spacing: 0.1em;
 }
 
 .Search-btn {

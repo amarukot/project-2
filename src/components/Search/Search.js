@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Search.css";
 

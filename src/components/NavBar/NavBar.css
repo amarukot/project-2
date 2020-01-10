@@ -1,6 +1,7 @@
 @media screen and (max-width: 575px) {
   .Nav-bar {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 .Nav-bar {
@@ -14,15 +15,17 @@
 
 .Nav-item {
   flex-grow: 1;
-  flex-wrap: wrap;
-  padding: 0 0 0 20px;
+  /* flex-wrap: wrap; */
+  /* padding: 0 0 0 20px; */
   font-family: worker, serif;
   font-weight: 600;
   font-style: normal;
   font-size: 120%;
-  color: rgb(58, 6, 6);
+  color: #361d32;
 }
 
 .active {
-  color: rgb(114, 6, 21);
+  /* color: #942c27; */
+  background-color: #543c52;
+  color: beige;
 }

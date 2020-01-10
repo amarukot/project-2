@@ -1,10 +1,6 @@
 .App {
   text-align: center;
 }
-/* 
-.Master-container {
-  display: flex;
-} */
 
 .App-logo {
   height: 40vmin;
@@ -18,7 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #361d32;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -47,6 +44,7 @@
 .Master-container {
   max-width: 1200px;
   text-align: center;
+  /* background-color: rgb(240, 240, 240); */
 }
 
 .Main-wrapper {

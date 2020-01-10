@@ -4,9 +4,12 @@
 
 .Side-box {
   flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.5);
   max-width: 33vw;
   min-width: 200px;
   padding: 20px;
+  border-radius: 40px;
+  margin: 20px 0 0 10px;
 }
 
 .Hero-box {
@@ -18,12 +21,14 @@
 .Featured-drink-text {
   font-family: "zenon", serif;
   font-size: 150%;
+  color: #361d32;
 }
 
 .Featured-link {
-  text-decoration: none;
+  /* text-decoration: none; */
   font-family: "zenon", serif;
   font-size: 100%;
   font-style: italic;
-  color: #f7a400;
+  /* color: #f7a400; */
+  color: #543c52;
 }

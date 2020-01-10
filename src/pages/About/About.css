@@ -1,3 +1,10 @@
+.About-box {
+  padding: 25px 100px;
+  max-width: 800px;
+  text-align: left;
+  /* min-height: 70vh; */
+}
+
 .About-text {
   font-size: 120%;
   line-height: 150%;
@@ -12,11 +19,11 @@ h2 {
   font-family: "worker", sans-serif;
   font-weight: 800;
   font-size: 200%;
-  color: rgb(114, 6, 21);
+  color: #543c52;
 }
 
-h3 {
+.Cheers {
   font-family: "zenon", serif;
-  font-size: 120%;
+  font-size: 180%;
   font-style: italic;
 }

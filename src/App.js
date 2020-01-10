@@ -37,8 +37,6 @@ function App() {
       .then(res1 => res1.json())
       .then(res1 => setShotDrinks(res1))
       .catch(err1 => console.log(err1));
-
-    console.log("API calls ran");
   }, []);
 
   const searchFunc = str => {
