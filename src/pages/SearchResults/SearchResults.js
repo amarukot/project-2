@@ -1,24 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import "./SearchResults.css";
+import Gallery from "../../components/Gallery/Gallery";
 
 function SearchResults(data) {
-  var cocktailDrinks = [];
+  var drinks = [];
 
   if (data.data && data.data[0]) {
-    cocktailDrinks = data.data;
+    drinks = data.data;
   }
 
-  const allDrinks = cocktailDrinks.map((item, index) => {
-    return (
-      <Link to={`/details/${item.idDrink}`} className="Drink-box" key={index}>
-        <img className="Drink-thumb-img" src={item.strDrinkThumb} alt="" />
-        <div className="Drink-title">
-          <h4>{item.strDrink}</h4>
-        </div>
-      </Link>
-    );
+  const allDrinks = drinks.map((item, index) => {
+    return <Gallery drink={item} key={index} />;
   });
 
   return <div className="Drinks-container">{allDrinks}</div>;
