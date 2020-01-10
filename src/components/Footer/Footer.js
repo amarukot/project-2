@@ -4,11 +4,14 @@ function Footer() {
   return (
     <p style={footerStyle}>
       by Aldo Marukot |{" "}
-      <a style={footerStyle} href="https://www.behance.net/runelighter">
+      <a style={footerLinkStyle} href="https://www.behance.net/runelighter">
         Behance
       </a>{" "}
       |{" "}
-      <a style={footerStyle} href="https://www.linkedin.com/in/aldomarukot/">
+      <a
+        style={footerLinkStyle}
+        href="https://www.linkedin.com/in/aldomarukot/"
+      >
         LinkedIn
       </a>{" "}
       | copyright &copy; 2020
@@ -26,6 +29,11 @@ const footerStyle = {
   height: "20px",
   clear: "both",
   fontFamily: "worker, sans-serif",
-  fontWeight: "200"
+  fontWeight: "200",
+  fontSize: "2vw"
+};
+
+const footerLinkStyle = {
+  color: "beige"
 };
 export default Footer;
