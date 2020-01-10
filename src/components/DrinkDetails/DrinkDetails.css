@@ -5,6 +5,9 @@
 
 .Detail-img {
   min-height: 300px;
+  max-height: 80vh;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .Info-box {

@@ -15,7 +15,7 @@ const footerStyle = {
   textAlign: "center",
   backgroundColor: "#6a8e90",
   marginTop: "-10px",
-  padding: "10px",
+  padding: "20px",
   position: "relative",
   height: "20px",
   clear: "both",

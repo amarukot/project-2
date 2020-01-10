@@ -11,7 +11,8 @@
 
 .Hero-box {
   flex-grow: 2;
-  min-width: 20vw;
+  /* min-width: 20vw; */
+  max-height: 65vh;
 }
 
 .Featured-drink-text {
