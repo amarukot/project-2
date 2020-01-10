@@ -8,7 +8,7 @@ function DrinkDetails(drink) {
   return (
     <div className="Detail-box">
       <div className="Info-box">
-        <h1>{thisDrink.strDrink}</h1>
+        <h2>{thisDrink.strDrink}</h2>
         <hr></hr>
         <h4 className="Detail-subtitle">Ingredients</h4>
         <div className="Ingredients">

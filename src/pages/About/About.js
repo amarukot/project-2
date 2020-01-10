@@ -22,8 +22,9 @@ function About() {
 }
 
 const aboutStyle = {
-  padding: "10px",
-  maxWidth: "800px"
+  padding: "25px 100px",
+  maxWidth: "800px",
+  textAlign: "left"
   // minHeight: "70vh"
 };
 

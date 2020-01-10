@@ -13,3 +13,16 @@
   flex-grow: 2;
   min-width: 20vw;
 }
+
+.Featured-drink-text {
+  font-family: "zenon", serif;
+  font-size: 150%;
+}
+
+.Featured-link {
+  text-decoration: none;
+  font-family: "zenon", serif;
+  font-size: 100%;
+  font-style: italic;
+  color: #f7a400;
+}

@@ -63,7 +63,7 @@ function App() {
           <h1>The Bartender's Guide</h1>
         </header>
         <NavBar searchFunc={searchFunc} />
-        <main>
+        <main className="Main-wrapper">
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route
@@ -92,5 +92,3 @@ function App() {
 }
 
 export default App;
-
-//

@@ -1,5 +1,11 @@
+@media screen and (max-width: 575px) {
+  .Nav-bar {
+    display: block;
+  }
+}
 .Nav-bar {
   display: flex;
+  flex-wrap: wrap;
   /* margin: 0 auto; */
   justify-content: space-around;
   background-color: lightgrey;
@@ -8,5 +14,15 @@
 
 .Nav-item {
   flex-grow: 1;
+  flex-wrap: wrap;
   padding: 0 0 0 20px;
+  font-family: worker, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 120%;
+  color: rgb(58, 6, 6);
+}
+
+.active {
+  color: rgb(114, 6, 21);
 }

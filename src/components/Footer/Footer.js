@@ -5,7 +5,8 @@ function Footer() {
     <p style={footerStyle}>
       by Aldo Marukot |{" "}
       <a href="https://www.behance.net/runelighter">Behance</a> |{" "}
-      <a href="https://www.linkedin.com/in/aldomarukot/">LinkedIn</a> | 2020
+      <a href="https://www.linkedin.com/in/aldomarukot/">LinkedIn</a> |
+      copyright &copy; 2020
     </p>
   );
 }
@@ -13,7 +14,11 @@ function Footer() {
 const footerStyle = {
   textAlign: "center",
   backgroundColor: "#6a8e90",
-  margin: "0 auto",
-  padding: "10px"
+  marginTop: "-10px",
+  padding: "10px",
+  position: "relative",
+  height: "20px",
+  clear: "both",
+  fontFamily: "zenon, serif"
 };
 export default Footer;

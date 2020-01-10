@@ -18,8 +18,8 @@
   height: 200px;
   width: 200px;
   padding: 0;
-  background-color: beige;
-  border: thin solid black;
+  background-color: black;
+  border: thin solid #191b4a;
   margin: 20px auto;
   overflow: hidden; /*cool*/
   position: relative;
@@ -40,4 +40,6 @@
   bottom: 1px;
   /* vertical-align: middle; */
   padding: 0 0 10px 0;
+  font-family: "zenon", serif;
+  color: #191b4a;
 }

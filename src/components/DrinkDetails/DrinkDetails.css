@@ -1,5 +1,6 @@
 .Detail-box {
   display: flex;
+  text-align: left;
 }
 
 .Detail-img {
@@ -12,30 +13,35 @@
 }
 
 .Instructions {
-  font-size: 80%;
+  font-family: "zenon", serif;
+  font-size: 100%;
   font-style: italic;
   margin-top: 0;
 }
 
 .Ingredients {
   display: flex;
-  font-size: 80%;
+  font-size: 100%;
   margin: 0;
   padding-left: 0;
 }
 
 .Detail-subtitle {
   margin-bottom: 10px;
+  font-family: "zenon", serif;
+  font-size: 120%;
 }
 
 .Ingredient-list {
   padding: 2px 0;
   margin-top: 0;
   list-style-type: none;
+  font-family: "zenon", serif;
 }
 
 .Measure-list {
   list-style-type: none;
   margin-top: 0;
   padding: 2px 10px;
+  font-family: "zenon", serif;
 }

@@ -1,9 +1,22 @@
 .About-text {
   font-size: 120%;
   line-height: 150%;
+  font-family: "zenon", serif;
 }
 
 .Email-link {
   font-weight: 600;
+}
+
+h2 {
+  font-family: "worker", sans-serif;
+  font-weight: 800;
+  font-size: 200%;
+  color: rgb(114, 6, 21);
+}
+
+h3 {
+  font-family: "zenon", serif;
+  font-size: 120%;
   font-style: italic;
 }

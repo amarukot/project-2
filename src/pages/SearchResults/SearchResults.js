@@ -15,7 +15,7 @@ function SearchResults(data) {
 
   return (
     <div className="Drinks-container">
-      {drinks.length == 0 ? (
+      {drinks.length === 0 ? (
         <div style={emptySearchStyle}>
           "Your search came up empty. Try again."
         </div>

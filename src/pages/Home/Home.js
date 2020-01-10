@@ -24,10 +24,13 @@ function Home() {
       <div className="Side-box">
         <h2>Featured Drink</h2>
         <hr></hr>
-        <h4>
+        <h4 className="Featured-drink-text">
           <i>{randDrink.drinks[0].strDrink}</i>
         </h4>
-        <Link to={`/details/${randDrink.drinks[0].idDrink}`} style={featLink}>
+        <Link
+          to={`/details/${randDrink.drinks[0].idDrink}`}
+          className="Featured-link"
+        >
           Click here to make this drink.
         </Link>
       </div>
@@ -38,11 +41,5 @@ function Home() {
     </section>
   );
 }
-
-const featLink = {
-  textDecoration: "none",
-  fontSize: "80%",
-  fontStyle: "italic"
-};
 
 export default Home;

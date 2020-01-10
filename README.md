@@ -26,11 +26,14 @@ Index.js
    |   +-- Random Drink Image
    |   +-- Random Drink Info
    +-- NavBar.js
-   |   +-- Link to Home, About, Category
+   |   +-- Link to Home, About, Categories
    |   +-- Search Form
-   +-- Category.js
-   +-- Details.js
-   |   +-- Ingredients.js
+   +-- Categories.js
+   |    +-- Details.js
+   |      +-- Ingredients.js
+   +-- Search Results.js
+   |    +-- Details.js
+   |      +-- Ingredients.js
    +-- Footer.js
 ```
 
@@ -38,9 +41,9 @@ Index.js
 
 MVP
 
-- home page with access to nav bar
-- nav bar with different categories of drinks
--
+- home page with random drink
+- category page that holds all drinks within that category
+- click on a thumbnail and lead to a detail page
 
 Post MVP
 
@@ -49,36 +52,44 @@ Post MVP
 
 ## Components
 
-| Component | Description                              |
-| --------- | ---------------------------------------- |
-| App       | holds layout, links, routes              |
-| Home      | holds About and Hero image               |
-| NavBar    | navigation links                         |
-| Category  | results of drinks within a category      |
-|           | category page also calls API             |
-| Details   | gets props and displays details of drink |
-| Footer    | just footer info                         |
+| Component | Description                                |
+| --------- | ------------------------------------------ |
+| App       | holds layout, links, routes                |
+|           | makes API calls                            |
+| Home      | holds About and Hero image                 |
+| About     | holds about page                           |
+| NavBar    | navigation links                           |
+| SearchBar | holds Search Field and Search Button       |
+| Cocktails | all drinks within this category            |
+| Shots     | all drinks within this category            |
+| Gallery   | holds thumbnail gallery of either category |
+|           | or search results                          |
+| Details   | gets props and displays details of         |
+|           | selected drink                             |
+| Footer    | just footer info                           |
 
 ## Time Frames
 
 | Component              | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------- | -------- | -------------- | ------------- | ----------- |
-| Working API Basic      | H        | 2 hrs          | 1.5 hrs       | 1.5 hrs     |
-| Creating Components    | H        | 5 hrs          | 2 hrs         | --          |
-| Navigation             | H        | 3 hrs          | 2 hrs         | --          |
-| Event handling         | H        | 4 hrs          | 1 hr          | --          |
-| Netlify deployment     | H        | 1 hr           | --            | --          |
-| Search functionality   | M        | 6 hrs          | --            | --          |
+| Working API Basic      | H        | 2 hrs          | 2 hrs         | 3 hrs       |
+| Creating Components    | H        | 5 hrs          | 6 hrs         | 8 hrs       |
+| Navigation             | H        | 3 hrs          | 3 hrs         | 3 hrs       |
+| Event handling         | H        | 4 hrs          | 5 hrs         | 7 hrs       |
+| Netlify deployment     | H        | 1 hr           | 1 hr          | 2 hrs       |
+| Search functionality   | M        | 6 hrs          | 7 hrs         | 8 hrs       |
 | Filter functionality   | L        | 8 hrs          | --            | --          |
-| Cleanup code, refactor | M        | 2 hrs          | --            | --          |
-| Total                  | --       | 32 hrs         | --            | --          |
+| Cleanup code, refactor | M        | 2 hrs          | 3 hrs         | 3 hrs       |
+| Total                  | --       | 32 hrs         | 27 hrs        | 33 hrs      |
 
 ## Additional Libraries
+
+react, react-router-dom
 
 ## Code Snippet
 
 <details>
-<summary> This is one of those code snippets that fixed something that bugged me for a while. Even asking TA's did not yield great results. </summary>
+<summary> This is one of those code snippets that fixed something that bugged me for a while.  </summary>
 
 ```jsx
 if (drinks.drinks && drinks.drinks[0]) {
@@ -169,6 +180,4 @@ This will not return an error, just an empty div while the API is fetched and th
 
 ### 1/9/20
 
-Made individual ingredients and measurements to detail page. Minor styling tweaks. Separated css styling to css files.
-
-Deployed to Netlify.
+Issues deploying to Netlify. Had something to do with setting up build folder as `dist` instead of `build`

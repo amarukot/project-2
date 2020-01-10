@@ -24,8 +24,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 3vmin);
   color: white;
+  font-family: worker, serif;
+
+  /* border-bottom: darkred solid 2px; */
 }
 
 .App-link {
@@ -39,4 +42,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Master-container {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.Main-wrapper {
+  min-height: 100%;
+  padding-bottom: 20px;
+  overflow: auto;
 }
