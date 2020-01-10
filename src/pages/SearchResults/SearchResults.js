@@ -13,7 +13,21 @@ function SearchResults(data) {
     return <Gallery drink={item} key={index} />;
   });
 
-  return <div className="Drinks-container">{allDrinks}</div>;
+  return (
+    <div className="Drinks-container">
+      {drinks.length == 0 ? (
+        <div style={emptySearchStyle}>
+          "Your search came up empty. Try again."
+        </div>
+      ) : (
+        allDrinks
+      )}
+    </div>
+  );
 }
 
+const emptySearchStyle = {
+  margin: "0 auto",
+  padding: "100px 0"
+};
 export default SearchResults;

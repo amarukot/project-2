@@ -46,7 +46,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("searchString is now", searchString);
     fetch(`${urlDrinkName}${searchString}`)
       .then(res => res.json())
       .then(res => setSearchDrinks(res))
