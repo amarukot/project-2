@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-// import logo from "./logo.svg";
 
 import "./App.css";
+import Logo from "./cocktail_img.svg";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -60,6 +60,7 @@ function App() {
     <BrowserRouter>
       <div className="Master-container">
         <header className="App-header">
+          <img src={require("./cocktail_img.png")} className="Cocktail-logo" />
           <h1>The Bartender's Guide</h1>
         </header>
         <NavBar searchFunc={searchFunc} />

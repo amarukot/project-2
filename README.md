@@ -12,6 +12,7 @@ A simple website to help the cocktail enthusiast and party host make a host of d
 
 - GitHub Repo: https://github.com/amarukot/project-2
 - Deployment URL: https://aldo-marukot-bartender-guide.netlify.com/
+- Video Presentation: https://youtu.be/a6N1jvxKCjQ
 
 ## Wireframes & React Architecture
 

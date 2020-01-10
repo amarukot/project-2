@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.Cocktail-logo {
+  max-height: 100px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -24,8 +30,11 @@
   font-size: calc(12px + 3vmin);
   color: white;
   font-family: worker, serif;
-
   /* border-bottom: darkred solid 2px; */
+}
+
+h1 {
+  margin-top: 0;
 }
 
 .App-link {
