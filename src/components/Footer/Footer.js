@@ -26,14 +26,15 @@ const footerStyle = {
   marginTop: "-10px",
   padding: "20px",
   position: "relative",
+  bottom: 0,
   height: "20px",
   clear: "both",
   fontFamily: "worker, sans-serif",
   fontWeight: "200",
-  fontSize: "2vw"
+  fontSize: "14px",
 };
 
 const footerLinkStyle = {
-  color: "beige"
+  color: "beige",
 };
 export default Footer;
