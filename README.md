@@ -6,7 +6,7 @@ Bartender's Guide - A React Website
 
 using API Cocktails: https://www.thecocktaildb.com/api.php
 
-A simple website to help the cocktail enthusiast and party host make a host of different cocktails and drinks. Look though categories or search for a particular drink and get the ingredients and recipe for it.
+A simple website to help the cocktail enthusiast and party host make different cocktails and drinks. Look though categories or search for a particular drink and get the ingredients and recipe for it.
 
 ## Project Links
 
@@ -117,8 +117,6 @@ const [drinks, setDrinks] = useState({});
 
 Able to `console.log(drinks.drinks)` but not able to map it out even after using `Object.values(drinks.drinks)` (also made sure what the data type was by doing `typeof`)
 
-Consulted with Carlos and we did not figure out why it was so.
-
 Doing the following fixed it, (but not explain)
 
 ```jsx
@@ -133,9 +131,9 @@ Building Home page with a hero image using API for a random drink, I encounted t
 const [drinks, setDrinks] = useState({ drinks: [] });
 useEffect(() => {
   fetch(randURL)
-    .then(res => res.json())
-    .then(res => setDrinks(res))
-    .catch(err => console.log(err));
+    .then((res) => res.json())
+    .then((res) => setDrinks(res))
+    .catch((err) => console.log(err));
 }, []);
 console.log(drinks.drinks[0]);
 ```
