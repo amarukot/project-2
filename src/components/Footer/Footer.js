@@ -14,7 +14,12 @@ function Footer() {
       >
         LinkedIn
       </a>{" "}
-      | copyright &copy; 2020
+      | copyright &copy; 2020 |
+      <a href="https://www.vexels.com/vectors/preview/78674/cocktails-neon-sign">
+        {" "}
+        Cocktails neon sign{" "}
+      </a>{" "}
+      | designed by Vexels
     </p>
   );
 }
@@ -31,7 +36,7 @@ const footerStyle = {
   clear: "both",
   fontFamily: "worker, sans-serif",
   fontWeight: "200",
-  fontSize: "14px",
+  fontSize: "10px",
 };
 
 const footerLinkStyle = {
