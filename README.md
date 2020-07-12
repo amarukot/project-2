@@ -180,3 +180,19 @@ This will not return an error, just an empty div while the API is fetched and th
 ### 1/9/20
 
 Issues deploying to Netlify. Had something to do with setting up build folder as `dist` instead of `build`
+
+### 7/12/20
+
+Issues deploying to Netlify again. Snippet of error below.  
+SOLUTION: Modified `"build": "react-scripts build` to `"build": "CI= react-scripts build",` in `package.json`.
+
+<details><summary>error snippet</summary>
+
+```
+6:21:54 PM:   If the build failed with a warning about "process.env.CI = true", this is due to "create-react-app" treating warnings as errors when in CI. In order to fix this problem, please either:
+6:21:54 PM:     - Fix the issues highlighted by the warnings above.
+6:21:54 PM:     - Or modify the "scripts.build" command in your "package.json" from "react-scripts build" to "CI= react-scripts build"
+6:21:54 PM:   More information can be found at https://docs.netlify.com/configure-builds/troubleshooting-tips/#build-fails-on-warning-message
+```
+
+</details>
