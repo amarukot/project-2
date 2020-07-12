@@ -17,9 +17,8 @@ function Footer() {
       | copyright &copy; 2020 |
       <a href="https://www.vexels.com/vectors/preview/78674/cocktails-neon-sign">
         {" "}
-        Cocktails neon sign{" "}
-      </a>{" "}
-      | designed by Vexels
+        (Cocktails neon sign - designed by Vexels)
+      </a>
     </p>
   );
 }
