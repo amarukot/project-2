@@ -27,6 +27,6 @@
 
 .active {
   /* color: #942c27; */
-  background-color: #543c52;
+  background-color: rgba(54, 29, 50, 0.25);
   color: beige;
 }
