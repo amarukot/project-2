@@ -60,7 +60,11 @@ function App() {
     <BrowserRouter>
       <div className="Master-container">
         <header className="App-header">
-          <img src={require("./cocktail_img.png")} className="Cocktail-logo" />
+          <img
+            src={require("./cocktail_img.png")}
+            className="Cocktail-logo"
+            alt="cocktail logo"
+          />
           <h1>The Bartender's Guide</h1>
         </header>
         <NavBar searchFunc={searchFunc} />
