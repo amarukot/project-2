@@ -32,6 +32,7 @@ const emptySearchStyle = {
   margin: "0 auto",
   padding: "100px 0",
   fontFamily: "worker, sans-serif",
-  fontSize: "200%"
+  fontSize: "200%",
 };
+
 export default SearchResults;

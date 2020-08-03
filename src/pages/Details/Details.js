@@ -9,14 +9,16 @@ function Details(props) {
 
   useEffect(() => {
     fetch(`${drinkDetailURL}${props.match.params.drink}`)
-      .then(res => res.json())
-      .then(res => setDrink(res))
-      .catch(err => console.log(err));
+      .then((res) => res.json())
+      .then((res) => setDrink(res))
+      .catch((err) => console.log(err));
   }, []);
 
   if (drink.length === 0) {
     return <div>...LOADING...</div>;
   }
+
+  console.log(props.match.params.drink);
 
   return <DrinkDetails drink={drink.drinks[0]} />;
 }

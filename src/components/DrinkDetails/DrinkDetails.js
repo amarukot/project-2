@@ -3,7 +3,7 @@ import "./DrinkDetails.css";
 
 function DrinkDetails(drink) {
   const thisDrink = drink.drink;
-  console.log(thisDrink.strIngredient1);
+  console.log(thisDrink);
 
   return (
     <div className="Detail-box">

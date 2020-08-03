@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import "./App.css";
-import Logo from "./cocktail_img.svg";
+//import Logo from "./cocktail_img.svg";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -29,26 +29,26 @@ function App() {
 
   useEffect(() => {
     fetch(urlCocktails)
-      .then(res => res.json())
-      .then(res => setCocktailDrinks(res))
-      .catch(err => console.log(err));
+      .then((res) => res.json())
+      .then((res) => setCocktailDrinks(res))
+      .catch((err) => console.log(err));
 
     fetch(urlShots)
-      .then(res1 => res1.json())
-      .then(res1 => setShotDrinks(res1))
-      .catch(err1 => console.log(err1));
+      .then((res1) => res1.json())
+      .then((res1) => setShotDrinks(res1))
+      .catch((err1) => console.log(err1));
   }, []);
 
-  const searchFunc = str => {
+  const searchFunc = (str) => {
     setSearchString(str);
   };
 
   useEffect(() => {
     if (searchString.length > 0) {
       fetch(`${urlDrinkName}${searchString}`)
-        .then(res => res.json())
-        .then(res => setSearchDrinks(res))
-        .catch(err => console.log(err));
+        .then((res) => res.json())
+        .then((res) => setSearchDrinks(res))
+        .catch((err) => console.log(err));
     }
   }, [searchString]);
 
@@ -69,19 +69,19 @@ function App() {
           <Route path="/about" component={About} />
           <Route
             path="/cocktails/"
-            render={props => <Cocktails data={cocktailDrinks.drinks} />}
+            render={(props) => <Cocktails data={cocktailDrinks.drinks} />}
           />
           <Route
             path="/shots/"
-            render={props => <Shots data={shotDrinks.drinks} />}
+            render={(props) => <Shots data={shotDrinks.drinks} />}
           />
           <Route
             path="/search/"
-            render={props => <SearchResults data={searchDrinks.drinks} />}
+            render={(props) => <SearchResults data={searchDrinks.drinks} />}
           />
           <Route
             path="/details/:drink"
-            render={props => (
+            render={(props) => (
               <Details data={cocktailDrinks.drinks} {...props} />
             )}
           />
